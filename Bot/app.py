@@ -3,10 +3,12 @@ from aiogram import Bot, Dispatcher, types, executor
 import os
 import django
 import openpyxl
+import sys
 
 
 
 # Set the DJANGO_SETTINGS_MODULE environment variable
+sys.path.append(os.path.abspath(os.path.join(os.path.dirname(__file__), '..')))
 os.environ.setdefault('DJANGO_SETTINGS_MODULE', 'Core.settings')
 
 # Configure Django
